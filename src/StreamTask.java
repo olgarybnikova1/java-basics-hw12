@@ -7,8 +7,7 @@ public class StreamTask {
         // TODO replace return with your code
         int SumSquareEven = Arrays.stream(numbers)
             .filter(x -> x % 2 == 0)
-            .map(x -> x * x)
-            .sum();
+            .reduce(0, (acc, elem) -> acc + elem * elem);
         return SumSquareEven;
     }
 
